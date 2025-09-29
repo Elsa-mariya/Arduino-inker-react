@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import '/styles/CentreOfExcellence.css'
-import HardwarePopout from './HardwarePopout'
-import SoftwarePopout from './SoftwarePopout'
-import AcademicCurriculumPopout from './AcademicCurriculumPopout'
-import CertificationsPopout from './CertificationsPopout'
+import HardwarePopout from './popouts/HardwarePopout'
+import SoftwarePopout from './popouts/SoftwarePopout'
+import AcademicCurriculumPopout from './popouts/AcademicCurriculumPopout'
+import CertificationsPopout from './popouts/CertificationsPopout'
 import Header from './Header'
 import Footer from './Footer'
 
