@@ -175,80 +175,8 @@ h2 {
     align-items: center;
 }
 
-/* Footer */
-footer {
-    background: #0f1724; /* dark slate */
-    color: #d1d5db; /* light gray */
-    padding: 3rem 0 2rem;
-    margin-top: 3rem;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: start;
-    padding-bottom: 1.5rem;
-}
-
-.footer-section h3 {
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.footer-section p,
-.footer-section li,
-.footer-section a {
-    color: #c7cbd1;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section a {
-    text-decoration: none;
-    color: #c7cbd1;
-}
-
-.footer-section a:hover {
-    color: #f37021;
-}
-
-.footer-contact p { margin-bottom: 0.4rem }
-
-.footer-socials {
-    display: flex;
-    gap: 0.6rem;
-    margin-top: 0.6rem;
-}
-
-.footer-socials a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.05);
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding-top: 1rem;
-    text-align: center;
-    color: #9aa0a6;
-    font-size: 0.9rem;
-}
-
+/* Footer styles have been moved to styles/footer.css to avoid duplication and simplify maintenance. */
 @media (max-width: 800px) {
-    .footer-content { grid-template-columns: 1fr; }
     .container { padding: 1rem; }
 }
 
