@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
-function Header({ onCOEClick, onHomeClick }) {
+function Header() {
   // Burger menu logic for mobile
   useEffect(() => {
     const burger = document.querySelector('.burger')
@@ -9,25 +10,7 @@ function Header({ onCOEClick, onHomeClick }) {
     burger && burger.addEventListener('click', onClick)
     return () => { burger && burger.removeEventListener('click', onClick) }
   }, [])
-  const handleCOEClick = (e) => {
-    e.preventDefault()
-    if (onCOEClick) {
-      onCOEClick()
-    }
-  }
-
-  const handleHomeClick = (e) => {
-    e.preventDefault()
-    if (onHomeClick) {
-      onHomeClick()
-    } else {
-      // Default behavior - scroll to home section
-      const element = document.getElementById('home')
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  }
+  // navigation now handled by react-router-dom <Link>
 
   return (
     <header>
@@ -37,8 +20,8 @@ function Header({ onCOEClick, onHomeClick }) {
           <img src="/assets/images/arduino_logo.svg-m7VDpjzqJNhkDPEW.png" alt="Arduino Logo" className="arduino-logo" />
         </div>
         <ul className="nav-links">
-          <li><a href="#home" onClick={handleHomeClick}>Home</a></li>
-          <li><a href="#center" onClick={handleCOEClick}>Centre of Excellence</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/coe">Centre of Excellence</Link></li>
           <li><a href="#edu">Edu</a></li>
           <li><a href="#industrial">Industrial</a></li>
         </ul>

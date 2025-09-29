@@ -14,7 +14,7 @@ function CentreOfExcellence({ onBack }) {
   const [showCertificationsPopout, setShowCertificationsPopout] = useState(false)
   return (
     <>
-      <Header onHomeClick={onBack} />
+  <Header />
       <div className="centre-of-excellence">
       {/* Section 1: Hero Banner */}
       <section className="hero-banner">
