@@ -180,7 +180,7 @@ function Categories(){
   const makerRef = useRef(null)
   const proRef = useRef(null)
   const [makerToggle, setMakerToggle] = useState(false)
-  const [eduBgImage, setEduBgImage] = useState('/assets/images/photo-1564747378409-c4542bde27c1')
+  const [eduBgImage, setEduBgImage] = useState('/assets/images/edubg.jpg')
   const [showEduPopout, setShowEduPopout] = useState(false)
 
   const { panelRef, panelState, show, scheduleHide, cancelHide } = useHoverPopout()
@@ -211,7 +211,7 @@ function Categories(){
           <div className="category-card maker-card" ref={makerRef}
                onMouseEnter={() => show(makerRef.current, '/assets/images/w6.1.PNG', 'right', 1)}
                onMouseLeave={() => scheduleHide()}>
-            <img src="/assets/images/maker-mxB2rzy7NVIVpRGx.jpg" alt="Maker" />
+            <img src="/assets/images/makerbg.jpg" alt="Maker" />
             <div className="card-overlay">
               <h3>Maker</h3>
               <p>Find creative solutions to everyday challenges</p>
@@ -235,7 +235,7 @@ function Categories(){
           <div className="category-card pro-card" ref={proRef}
                onMouseEnter={() => show(proRef.current, '/assets/images/w7.PNG', 'left', 1)}
                onMouseLeave={() => scheduleHide()}>
-            <img src="/assets/images/photo-1671726805768-93b4c260766b" alt="Professional" />
+            <img src="/assets/images/probg.jpg" alt="Professional" />
             <div className="card-overlay">
               <h3>Pro</h3>
               <p>Enable businesses of any size to exploit the potential of AI and IoT</p>
