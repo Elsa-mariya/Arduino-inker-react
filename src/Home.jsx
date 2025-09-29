@@ -48,71 +48,71 @@ function Partners(){
   )
 }
 
-function Future(){
-  const wrapperRef = useRef(null)
-  const imgRef = useRef(null)
-  const [imgRatio, setImgRatio] = useState(null)
-
-  function onImgLoad(e){
-    const img = e.target
-    if (!img || !wrapperRef.current) return
-    const w = img.naturalWidth || img.width
-    const h = img.naturalHeight || img.height
-    if (w && h) {
-      const ratio = `${w} / ${h}`
-      setImgRatio(ratio)
-    }
-  }
-
+function Future() {
+  // Adapted from ContentSection (Figma style)
   return (
     <section id="future" className="future">
       <div className="container">
-        <div className="future-content">
-          <div className="future-text">
-            <div>
-              <h2 className="future-heading">
-                Shaping the Future:
-                <br />
-                <span className="gradient-text">Inker Robotics & Arduino</span>
-              </h2>
-              <div className="accent-bar" aria-hidden="true"></div>
-            </div>
-
-            <div className="future-paragraphs">
-              <p>
-                Through our official partnership with Arduino, we're revolutionizing
-                STEM education by combining cutting-edge hardware with innovative
-                educational methodologies.
-              </p>
-
-              <p>
-                Our collaborative approach empowers educators with comprehensive
-                resources, curriculum guides, and hands-on learning experiences
-                that make technology education accessible and engaging.
-              </p>
-
-              <p>
-                Together, we're building the next generation of innovators,
-                engineers, and creative problem-solvers who will shape our
-                technological future.
-              </p>
-            </div>
-
-            {/* CTA removed - descriptions should flow directly beneath */}
-          </div>
-
-          <div className="future-image">
-            <div className="image-deck">
-              <div className="image-deck-bg"></div>
-                <div className="card-wrapper" ref={wrapperRef} style={imgRatio ? { aspectRatio: imgRatio } : undefined}>
-                  <img ref={imgRef} onLoad={onImgLoad} src="/assets/images/futureimg.jpg" alt="Arduino Board" className="card-image" />
+        <div className="future-content-grid">
+          {/* Content */}
+          <div className="future-text-block future-centered">
+            <h2 className="future-heading">
+              Shaping the Future:
+              <span className="gradient-text">Inker Robotics &amp; Arduino</span>
+            </h2>
+            <div className="future-points-grid">
+              <div className="future-point">
+                <div className="future-point-icon teal"></div>
+                <div>
+                  <h4>Interactive Learning</h4>
+                  <p>Hands-on projects that make technology accessible</p>
                 </div>
+              </div>
+              <div className="future-point">
+                <div className="future-point-icon orange"></div>
+                <div>
+                  <h4>Real-World Applications</h4>
+                  <p>Connect classroom learning to industry needs</p>
+                </div>
+              </div>
+              <div className="future-point">
+                <div className="future-point-icon blue"></div>
+                <div>
+                  <h4>Creative Problem Solving</h4>
+                  <p>Foster innovation through collaborative projects</p>
+                </div>
+              </div>
+              <div className="future-point">
+                <div className="future-point-icon purple"></div>
+                <div>
+                  <h4>Future-Ready Skills</h4>
+                  <p>Prepare students for tomorrow's challenges</p>
+                </div>
+              </div>
             </div>
+            <div className="future-desc">
+              <p>
+                Through our official partnership with Arduino, we're revolutionizing STEM education by combining cutting-edge robotics with accessible, hands-on learning experiences.
+              </p>
+            </div>
+            <div className="future-cta">
+              <button className="future-btn">Explore Our Programs</button>
+            </div>
+          </div>
+          {/* Image */}
+          <div className="future-image-block">
+              <div className="future-image-card">
+                <img src="/assets/images/futureimg.jpg" alt="Arduino circuit board and electronics" className="future-img-main" />
+              </div>
+            {/* Decorative background circles */}
+            <div className="future-bg-circle teal"></div>
+            <div className="future-bg-circle orange"></div>
+            <div className="future-bg-circle blue"></div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function Categories(){

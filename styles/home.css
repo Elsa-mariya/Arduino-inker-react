@@ -1,3 +1,215 @@
+/* ---- CENTERING FOR FUTURE SECTION ---- */
+.future-centered {
+  align-items: center;
+  text-align: center;
+}
+.future-centered .future-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+.future-centered .future-points-grid {
+  justify-items: center;
+}
+.future-centered .future-point {
+  justify-content: center;
+}
+.future-centered .future-desc,
+.future-centered .future-cta {
+  margin-left: auto;
+  margin-right: auto;
+}
+.future-image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ---- FUTURE SECTION: MODERN CONTENT GRID ---- */
+.future-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.future-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.future-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: #e6fffa;
+  color: #0891b2;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.future-heading {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #0f1724;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+}
+.future-heading .gradient-text {
+  display: block;
+  color: #14b8a6;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-top: 0.2em;
+}
+
+.future-points-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.future-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.future-point-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+.future-point-icon.teal { background: #ccfbf1; }
+.future-point-icon.orange { background: #ffedd5; }
+.future-point-icon.blue { background: #dbeafe; }
+.future-point-icon.purple { background: #ede9fe; }
+.future-point-icon::after {
+  content: '';
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+}
+.future-point-icon.teal::after { background: #14b8a6; }
+.future-point-icon.orange::after { background: #f97316; }
+.future-point-icon.blue::after { background: #2563eb; }
+.future-point-icon.purple::after { background: #a21caf; }
+.future-point h4 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 0 0 0.15em 0;
+  color: #0f1724;
+}
+.future-point p {
+  font-size: 0.98rem;
+  color: #475569;
+  margin: 0;
+}
+
+.future-desc {
+  margin: 1.2rem 0 0.5rem 0;
+}
+.future-desc p {
+  font-size: 1.13rem;
+  color: #334155;
+  margin: 0;
+}
+
+.future-cta {
+  margin-top: 1.2rem;
+}
+.future-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(90deg, #14b8a6, #0e7490);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 6px 24px rgba(20,184,166,0.10);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.future-btn:hover {
+  background: linear-gradient(90deg, #0e7490, #14b8a6);
+  transform: scale(1.04);
+}
+
+.future-image-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+.future-image-card {
+  position: relative;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.15);
+  overflow: hidden;
+  padding: 1.2rem;
+  z-index: 2;
+}
+.future-img-main {
+  width: 480px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  display: block;
+}
+.future-img-label {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(2px);
+  padding: 0.4rem 1rem;
+  border-radius: 0.7rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1e293b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.future-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.45;
+  z-index: 1;
+}
+.future-bg-circle.teal {
+  width: 70px; height: 70px; background: #99f6e4; top: -18px; left: -18px;
+}
+.future-bg-circle.orange {
+  width: 120px; height: 120px; background: #fdba74; bottom: -32px; right: -32px;
+}
+.future-bg-circle.blue {
+  width: 60px; height: 60px; background: #93c5fd; top: 50%; left: -32px; transform: translateY(-50%);
+}
+
+@media (max-width: 900px) {
+  .future-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+  .future-image-block {
+    min-height: 220px;
+  }
+  .future-image-card {
+    padding: 0.7rem;
+  }
+  .future-img-main {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+}
 /* =========================
   HOME PAGE STYLES
   (Hero, Partners, Future, Categories)
