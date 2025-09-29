@@ -152,6 +152,21 @@ function Partners(){
 }
 
 function Future(){
+  const wrapperRef = useRef(null)
+  const imgRef = useRef(null)
+  const [imgRatio, setImgRatio] = useState(null)
+
+  function onImgLoad(e){
+    const img = e.target
+    if (!img || !wrapperRef.current) return
+    const w = img.naturalWidth || img.width
+    const h = img.naturalHeight || img.height
+    if (w && h) {
+      const ratio = `${w} / ${h}`
+      setImgRatio(ratio)
+    }
+  }
+
   return (
     <section id="future" className="future">
       <div className="container">
@@ -192,13 +207,9 @@ function Future(){
           <div className="future-image">
             <div className="image-deck">
               <div className="image-deck-bg"></div>
-              <div className="card-wrapper">
-                <img src="/assets/images/photo-1584443348278-4789e86c7373" alt="Arduino Board" className="card-image" />
-                <div className="card-content">
-                  <h3>Educational Innovation</h3>
-                  <p>Bridging theory and practice through hands-on Arduino projects that inspire creativity and deep learning.</p>
+                <div className="card-wrapper" ref={wrapperRef} style={imgRatio ? { aspectRatio: imgRatio } : undefined}>
+                  <img ref={imgRef} onLoad={onImgLoad} src="/assets/images/futureimg.jpg" alt="Arduino Board" className="card-image" />
                 </div>
-              </div>
             </div>
           </div>
         </div>
