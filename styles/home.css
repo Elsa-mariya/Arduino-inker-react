@@ -1,0 +1,44 @@
+/* Home page styles: hero, partners, future, categories, and popout */
+
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.hero-background img { width: 100%; height: 100%; object-fit: cover; display:block }
+.hero-overlay { position:absolute; inset:0; background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)); }
+.hero-content-overlay { position:absolute; text-align:center }
+.hero-content-overlay h1 { font-size: 2.5rem; margin:0 }
+.hero-content-overlay p { margin-top:0.5rem; font-size:1.1rem }
+
+.partners { padding: 3rem 0 }
+.partners-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem }
+.partner-card { background:#fff; padding:1.25rem; border-radius:8px }
+.partner-card img { max-width:160px }
+.stats-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:1rem; margin-top:1rem }
+.stat-item h3 { margin:0; color:#0a58ca }
+
+.future { padding: 3rem 0; background: #f9fafb }
+.future-content { display:flex; gap:2rem; align-items:center }
+.future-text h2 { margin:0 }
+.future-image img { width:100%; border-radius:8px }
+
+.categories { padding: 3rem 0 }
+.categories-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:1rem }
+.category-card { position:relative; overflow:hidden; border-radius:8px }
+.category-card img { width:100%; height:100%; object-fit:cover; display:block }
+.card-overlay { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:1rem; background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.45)); color:#fff }
+.btn { display:inline-block; background:#0a58ca; color:#fff; padding:0.5rem 0.75rem; border-radius:4px; text-decoration:none }
+
+.popout-panel { position:fixed; display:none; z-index:9000; background:#fff; box-shadow:0 8px 20px rgba(0,0,0,0.15); border-radius:6px; overflow:hidden }
+.popout-panel img { width:100%; height:100%; object-fit:cover; display:block }
+.popout-panel.open { transform: translateY(0); transition: transform 220ms ease, opacity 220ms ease; opacity:1 }
+
+@media (max-width: 900px) {
+  .future-content { flex-direction:column }
+  .partners-grid { grid-template-columns: 1fr }
+  .categories-grid { grid-template-columns: 1fr }
+}
