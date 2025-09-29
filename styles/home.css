@@ -23,8 +23,8 @@
 
 .future { padding: 3.5rem 0; background: #f9fafb }
 .future-content { display:flex; gap:2.5rem; align-items:stretch }
-.future-heading { font-size: 3.6rem; line-height: 1.02; color: #0f1724; font-weight: 900 }
-.future-text h2 { margin:0; font-weight:900; font-size:3.2rem; line-height:1.04 }
+.future-heading { font-size: 4.6rem; line-height: 1.02; color: #0f1724; font-weight: 900 }
+.future-text h2 { margin:0; font-weight:900; font-size:4rem; line-height:1.03 }
 
 /* Bigger card and full-bleed image enforcement */
 .future-image { flex: 0.85; max-width: 640px; min-width: 320px; min-height: 420px; display:flex; align-items:stretch }
