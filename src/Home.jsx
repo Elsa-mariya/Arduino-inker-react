@@ -157,17 +157,51 @@ function Future(){
       <div className="container">
         <div className="future-content">
           <div className="future-text">
-            <h2>Shaping the Future:<br/>Inker & Arduino</h2>
-            <ul>
-              <li>Arduino's global hardware & software + Inker's hands-on robotics expertise.</li>
-              <li>Accessible, engaging, and scalable STEAM education.</li>
-              <li>Faster prototyping and real-world learning.</li>
-              <li>Strong support systems for students & educators.</li>
-              <li>Empowering the next generation of innovators.</li>
-            </ul>
+            <div>
+              <h2 className="future-heading">
+                Shaping the Future:
+                <br />
+                <span className="gradient-text">Inker & Arduino</span>
+              </h2>
+              <div className="accent-bar" aria-hidden="true"></div>
+            </div>
+
+            <div className="future-paragraphs">
+              <p>
+                Through our official partnership with Arduino, we're revolutionizing
+                STEM education by combining cutting-edge hardware with innovative
+                educational methodologies.
+              </p>
+
+              <p>
+                Our collaborative approach empowers educators with comprehensive
+                resources, curriculum guides, and hands-on learning experiences
+                that make technology education accessible and engaging.
+              </p>
+
+              <p>
+                Together, we're building the next generation of innovators,
+                engineers, and creative problem-solvers who will shape our
+                technological future.
+              </p>
+            </div>
+
+            <div className="pt-4">
+              <a href="#" className="btn">Learn More</a>
+            </div>
           </div>
+
           <div className="future-image">
-            <img src="/assets/images/photo-1584443348278-4789e86c7373" alt="Arduino Board" />
+            <div className="image-deck">
+              <div className="image-deck-bg"></div>
+              <div className="card-wrapper">
+                <img src="/assets/images/photo-1584443348278-4789e86c7373" alt="Arduino Board" className="card-image" />
+                <div className="card-content">
+                  <h3>Educational Innovation</h3>
+                  <p>Bridging theory and practice through hands-on Arduino projects that inspire creativity and deep learning.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
