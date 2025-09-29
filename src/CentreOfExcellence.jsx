@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './CentreOfExcellence.css'
+import '/styles/CentreOfExcellence.css'
 import HardwarePopout from './HardwarePopout'
 import SoftwarePopout from './SoftwarePopout'
 import AcademicCurriculumPopout from './AcademicCurriculumPopout'

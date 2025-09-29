@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import CentreOfExcellence from './CentreOfExcellence'
-import Header from './Header'
-import Footer from './Footer'
+import CentreOfExcellence from './src/CentreOfExcellence'
+import Header from './src/Header'
+import Footer from './src/Footer'
 
 function useHoverPopout() {
   const panelRef = useRef(null)
@@ -390,17 +390,13 @@ export default function App(){
     return <CentreOfExcellence onBack={() => setShowCOE(false)} />
   }
 
-  return (
-    <>
-      <Header 
-        onCOEClick={() => setShowCOE(true)}
-        onHomeClick={() => setShowCOE(false)}
-      />
-      <Hero/>
-      <Partners/>
-      <Future/>
-      <Categories/>
-      <Footer/>
-    </>
-  )
+    return (
+        <>
+            <Header onCOEClick={() => setShowCOE(true)} onHomeClick={() => setShowCOE(false)} />
+            <Hero />
+            <Partners />
+            <Footer />
+        </>
+    )
 }
+
