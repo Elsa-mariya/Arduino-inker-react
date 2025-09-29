@@ -228,12 +228,12 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* Transparent/neutral overlay */
-  background: linear-gradient(120deg, rgba(20,24,31,0.82) 0%, rgba(20,24,31,0.32) 100%);
+  /* Darker black overlay for image */
+    background: linear-gradient(120deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.32) 100%);
 }
 .hero-content-overlay { position:absolute; text-align:center }
 .hero-content-overlay h1 {
-  font-size: 5.2rem;
+  font-size: 10.2rem;
   margin: 0;
   font-weight: 1000;
   letter-spacing: -1.5px;
