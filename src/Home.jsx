@@ -186,9 +186,7 @@ function Future(){
               </p>
             </div>
 
-            <div className="pt-4">
-              <a href="#" className="btn">Learn More</a>
-            </div>
+            {/* CTA removed - descriptions should flow directly beneath */}
           </div>
 
           <div className="future-image">

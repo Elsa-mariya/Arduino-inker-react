@@ -190,7 +190,7 @@ h2 {
     padding: 0 5%;
 }
 
-.future-heading { font-size: 2.4rem; line-height: 1.05; color: #0f1724; font-weight: 800 }
+.future-heading { font-size: 3.2rem; line-height: 1.03; color: #0f1724; font-weight: 900 }
 .gradient-text { 
     display: block;
     background: linear-gradient(90deg,#00b3b6,#f37021);
@@ -198,7 +198,16 @@ h2 {
     background-clip: text;
     color: transparent;
 }
-.accent-bar { width: 5rem; height: 8px; background: linear-gradient(90deg,#00b3b6,#f37021); border-radius: 6px; margin-top: 1rem }
+.accent-bar { width: 5rem; height: 8px; background: linear-gradient(90deg,#00b3b6,#f37021); border-radius: 6px; margin-top: 1rem; margin-bottom: 1.25rem }
+
+@media (max-width: 800px) {
+    .accent-bar { margin-bottom: 0.75rem }
+}
+
+@media (max-width: 900px) {
+    .future-heading { font-size: 2rem }
+    .future-text h2 { font-size: 1.6rem }
+}
 
 .future-paragraphs p { margin-bottom: 1rem; color: #475569 }
 .image-deck { position: relative }

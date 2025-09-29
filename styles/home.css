@@ -23,7 +23,8 @@
 
 .future { padding: 3rem 0; background: #f9fafb }
 .future-content { display:flex; gap:2rem; align-items:center }
-.future-text h2 { margin:0; font-weight:700; font-size:1.5rem }
+.future-heading { font-size: 3.2rem; line-height: 1.03; color: #0f1724; font-weight: 900 }
+.future-text h2 { margin:0; font-weight:800; font-size:3rem; line-height:1.05 }
 .future-image img { width:100%; border-radius:8px }
 
 .categories { padding: 3rem 0 }
@@ -75,6 +76,8 @@
   .categories-grid { display:block }
   .categories-grid { padding:0 }
   .category-card { width:100%; aspect-ratio: 3 / 4; margin-bottom:1rem }
+  .future-heading { font-size: 2rem }
+  .future-text h2 { font-size: 1.6rem }
 }
 
 @media (min-width: 1400px) {
