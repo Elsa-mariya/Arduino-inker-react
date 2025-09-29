@@ -127,7 +127,7 @@ function Partners(){
         <div className="partners-grid">
           <div className="partner-card">
             <img src="/assets/images/arduino_logo.svg-m7VDpjzqJNhkDPEW.png" alt="Arduino Logo" />
-            <p>Inker Robotics confidently leads the charge with groundbreaking advancements and globally validated tools, seamlessly bridging international standards with local opportunities to empower the future of robotics and IoT innovation.</p>
+            <p>Arduino empowers innovation in electronics, robotics, and IoT by providing open-source, easy-to-use hardware and software. From simple sensors to connected devices, Arduino transforms ideas into action, enabling creators worldwide to build everything from everyday gadgets to advanced scientific instruments.</p>
             <div className="stats-grid">
               <div className="stat-item"><h3>1M+</h3><p>Arduino Uno Boards sold</p></div>
               <div className="stat-item"><h3>6.5K+</h3><p>Official Libraries</p></div>
