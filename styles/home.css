@@ -1,5 +1,9 @@
-/* Home page styles: hero, partners, future, categories, and popout */
+/* =========================
+  HOME PAGE STYLES
+  (Hero, Partners, Future, Categories)
+  ========================= */
 
+/* ---- HERO SECTION ---- */
 .hero {
   position: relative;
   height: 60vh;
@@ -14,6 +18,7 @@
 .hero-content-overlay h1 { font-size: 2.6rem; margin:0; font-weight:800; letter-spacing:-0.5px }
 .hero-content-overlay p { margin-top:0.5rem; font-size:1.15rem; font-weight:600 }
 
+/* ---- PARTNERS SECTION ---- */
 .partners { padding: 3rem 0 }
 .partners-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem }
 .partner-card { background:#fff; padding:1.25rem; border-radius:8px }
@@ -21,19 +26,20 @@
 .stats-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:1rem; margin-top:1rem }
 .stat-item h3 { margin:0; color:#0a58ca }
 
+/* ---- FUTURE / PARTNERSHIP SECTION ---- */
 .future { padding: 3.5rem 0; background: #f9fafb }
 .future-content { display:flex; gap:2.5rem; align-items:stretch }
 .future-heading { font-size: 4.6rem; line-height: 1.02; color: #0f1724; font-weight: 900 }
 .future-text h2 { margin:0; font-weight:900; font-size:4rem; line-height:1.03 }
 
-/* Bigger card and full-bleed image enforcement */
+/* ---- FUTURE CARD & IMAGE ---- */
 .future-image { flex: 0.85; max-width: 640px; min-width: 320px; min-height: 420px; display:flex; align-items:stretch }
 .image-deck { position: relative; width:100%; display:flex; align-items:stretch }
 .image-deck-bg { display:none !important } /* hide rotated decorative bg that can reveal gaps */
 .card-wrapper { position: relative; width:100%; height:100%; min-height:420px; border-radius:20px; overflow:hidden }
 .card-wrapper .card-image, .card-wrapper > img { position: absolute !important; inset: 0 !important; width:100% !important; height:100% !important; object-fit: cover !important; display:block !important }
 
-/* responsive tweaks */
+/* ---- RESPONSIVE: Future & Partners ---- */
 @media (max-width: 900px) {
   .future-content { flex-direction:column }
   .future-image { min-height: 360px; max-width: 100%; width:100% }
@@ -41,20 +47,21 @@
   .future-text h2 { font-size: 1.6rem }
 }
 
+/* ---- CATEGORIES SECTION ---- */
 .categories { padding: 3rem 0 }
 .categories-grid { display:flex; gap:1.25rem; align-items:stretch; justify-content:center; flex-wrap:wrap; overflow-x:visible; padding-bottom:0 }
 
-/* Default: black & white look */
+/* ---- CATEGORY CARDS: Black & White Look ---- */
 .category-card { position:relative; overflow:hidden; border-radius:10px; cursor:pointer; flex: 0 0 68vw; display:flex; align-items:stretch; max-width: 1200px; aspect-ratio: 3 / 4 }
 .category-card img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition: transform 360ms cubic-bezier(.22,.9,.35,1), filter 300ms ease; filter: grayscale(100%) contrast(1.05) brightness(0.95) }
 
-/* Dark gradient to keep text legible at all times */
+/* ---- CATEGORY CARD OVERLAY ---- */
 .card-overlay { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:1.25rem; z-index:3; color:#fff; background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.64)); text-shadow: none }
 .card-overlay h3{ margin:0 0 .25rem 0; font-weight:700; font-size:1.45rem; line-height:1.05 }
 .card-overlay p{ margin:0 0 .75rem 0; font-weight:600; opacity:0.95 }
 .btn { display:inline-block; background:#111; color:#fff; padding:0.5rem 0.75rem; border-radius:6px; text-decoration:none; box-shadow: 0 6px 16px rgba(0,0,0,0.3) }
 
-/* Color reveal overlay (mix-blend to add hue) */
+/* ---- CATEGORY CARD COLOR REVEAL ---- */
 .category-card::after {
   content: '';
   position: absolute;
@@ -67,23 +74,25 @@
   mix-blend-mode: screen;
 }
 
-/* On hover reveal color and slightly scale image */
+/* ---- CATEGORY CARD HOVER ---- */
 .category-card:hover img { filter: none; transform: scale(1.04); }
 .category-card:hover::after { opacity: .42 }
 
-/* Per-card accent colors (used by ::after) */
+/* ---- CATEGORY CARD ACCENT COLORS ---- */
 .edu-card::after { background: linear-gradient(135deg, rgba(10,143,62,0.18), rgba(10,143,62,0.06)) }
 .maker-card::after { background: linear-gradient(135deg, rgba(183,108,255,0.18), rgba(183,108,255,0.06)) }
 .pro-card::after { background: linear-gradient(135deg, rgba(255,107,74,0.18), rgba(255,107,74,0.06)) }
 
-/* Ensure overlay text always sits above color overlay */
+/* ---- CATEGORY CARD OVERLAY Z-INDEX ---- */
 .card-overlay { position: relative }
 
 
+/* ---- POPOUT PANEL (legacy, can remove if unused) ---- */
 .popout-panel { position:fixed; display:none; z-index:9000; background:#fff; box-shadow:0 8px 20px rgba(0,0,0,0.15); border-radius:6px; overflow:hidden }
 .popout-panel img { width:100%; height:100%; object-fit:cover; display:block }
 .popout-panel.open { transform: translateY(0); transition: transform 220ms ease, opacity 220ms ease; opacity:1 }
 
+/* ---- RESPONSIVE: Categories, Partners, Future ---- */
 @media (max-width: 900px) {
   .future-content { flex-direction:column }
   .partners-grid { grid-template-columns: 1fr }
@@ -94,6 +103,7 @@
   .future-text h2 { font-size: 1.6rem }
 }
 
+/* ---- RESPONSIVE: Large screens ---- */
 @media (min-width: 1400px) {
   .category-card { flex: 0 0 52vw; aspect-ratio: 3 / 4; min-height: auto }
   .categories-grid { gap: 2.5rem }
