@@ -129,9 +129,9 @@ function Categories() {
             clipPath: 'polygon(0% 0%, 100% 0%, 0% 50%)',
           }}
         >
-          <div className="triangle-content left" style={{ justifyContent: 'flex-start', paddingTop: '5.2rem', paddingBottom: '0.5rem' }}>
-            <h2>Edu</h2>
-            <p>Empower the next generations of students to be the disruptors of the future</p>
+          <div className="triangle-content left" style={{ justifyContent: 'flex-start', paddingTop: '0', paddingBottom: '0.5rem', maxWidth: '480px', lineHeight: 1.25, textShadow: '0 2px 8px rgba(0,0,0,0.18)' }}>
+            <h2 style={{marginBottom: '0.7rem'}}>Edu</h2>
+            <p style={{marginBottom: '1.2rem'}}>Empower the next generations of students to be the disruptors of the future</p>
             <a href="#" className="triangle-btn edu" onClick={e => e.preventDefault()}>Learn More</a>
           </div>
         </div>
@@ -144,9 +144,9 @@ function Categories() {
             clipPath: 'polygon(100% 0%, 100% 100%, 0% 50%)',
           }}
         >
-          <div className="triangle-content center" style={{ alignItems: 'flex-end', textAlign: 'right', justifyContent: 'center', paddingRight: '7.5rem', paddingLeft: '0', width: '100%', boxSizing: 'border-box' }}>
-            <h2>Maker</h2>
-            <p>Find creative solutions to everyday challenges</p>
+          <div className="triangle-content center" style={{ alignItems: 'flex-end', textAlign: 'right', justifyContent: 'center', paddingRight: '2.5rem', paddingLeft: '0', width: '100%', boxSizing: 'border-box', maxWidth: '520px', marginLeft: 'auto', marginRight: '0', lineHeight: 1.25, textShadow: '0 2px 8px rgba(0,0,0,0.18)' }}>
+            <h2 style={{marginBottom: '0.7rem'}}>Maker</h2>
+            <p style={{marginBottom: '1.2rem'}}>Find creative solutions to everyday challenges</p>
             <a href="#" className="triangle-btn maker" onClick={e => e.preventDefault()}>Learn More</a>
           </div>
         </div>
@@ -159,9 +159,9 @@ function Categories() {
             clipPath: 'polygon(0% 50%, 100% 100%, 0% 100%)',
           }}
         >
-          <div className="triangle-content left bottom" style={{ justifyContent: 'flex-end', alignItems: 'flex-start', paddingBottom: '7rem', paddingTop: '0.5rem' }}>
-            <h2>Pro</h2>
-            <p>Enable businesses of any size to exploit the potential of AI and IoT</p>
+          <div className="triangle-content left bottom" style={{ justifyContent: 'flex-end', alignItems: 'flex-start', paddingBottom: '2.2rem', paddingTop: '0.5rem', maxWidth: '480px', lineHeight: 1.25, textShadow: '0 2px 8px rgba(0,0,0,0.18)' }}>
+            <h2 style={{marginBottom: '0.7rem'}}>Pro</h2>
+            <p style={{marginBottom: '1.2rem'}}>Enable businesses of any size to exploit the potential of AI and IoT</p>
             <a href="#" className="triangle-btn pro" onClick={e => e.preventDefault()}>Learn More</a>
           </div>
         </div>

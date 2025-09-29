@@ -1,3 +1,16 @@
+/* Overlay for entire triangle card for better contrast */
+.triangle-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.10) 100%);
+}
+.triangle-content {
+  position: relative;
+  z-index: 3;
+}
 /* ---- CATEGORIES TRIANGLE LAYOUT ---- */
 .categories-triangle-section {
   width: 100%;
