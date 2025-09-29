@@ -115,77 +115,69 @@ function Future() {
   );
 }
 
-function Categories(){
-  const eduRef = useRef(null)
-  const makerRef = useRef(null)
-  const proRef = useRef(null)
-  const [makerToggle, setMakerToggle] = useState(false)
-  const [eduBgImage, setEduBgImage] = useState('/assets/images/edubg.jpg')
-  // Popouts removed for Edu, Maker and Pro cards per request
 
+function Categories() {
+  // Triangle layout with local images as backgrounds
   return (
-    <section id="categories" className="categories">
-      <div className="container">
-        <div className="categories-grid">
-          <div className="category-card edu-card" ref={eduRef}>
-            <img src={eduBgImage} alt="Education" />
-            <div className="card-overlay">
-              <h3>Edu</h3>
-              <p>Empower the next generations of students to be the disruptors of the future</p>
-              <a 
-                href="#" 
-                role="button" 
-                className="btn"
-                onClick={(e) => { e.preventDefault() }}
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-          
-          <div className="category-card maker-card" ref={makerRef}>
-            <img src="/assets/images/makerbg.jpg" alt="Maker" />
-            <div className="card-overlay">
-              <h3>Maker</h3>
-              <p>Find creative solutions to everyday challenges</p>
-              <a 
-                href="#" 
-                role="button" 
-                className="btn" 
-                onClick={(e) => {
-                  e.preventDefault()
-                  // keep the toggle state for any internal UI change, but do not open popouts
-                  setMakerToggle(prev => !prev)
-                }}
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-          <div className="category-card pro-card" ref={proRef}
-               >
-            <img src="/assets/images/probg.jpg" alt="Professional" />
-            <div className="card-overlay">
-              <h3>Pro</h3>
-              <p>Enable businesses of any size to exploit the potential of AI and IoT</p>
-              <a 
-                href="#" 
-                role="button" 
-                className="btn" 
-                onClick={(e) => {
-                  e.preventDefault()
-                  // popout removed - no action
-                }}
-              >
-                Learn More
-              </a>
-            </div>
+    <section id="categories" className="categories-triangle-section">
+      <div className="categories-triangle-wrapper">
+        {/* Edu Section - Top Left Triangle */}
+        <div
+          className="triangle-card edu-triangle"
+          style={{
+            backgroundImage: "url('/assets/images/edubg.jpg')",
+            clipPath: 'polygon(0% 0%, 100% 0%, 0% 50%)',
+          }}
+        >
+          <div className="triangle-content left" style={{ justifyContent: 'flex-start', paddingTop: '5.2rem', paddingBottom: '0.5rem' }}>
+            <h2>Edu</h2>
+            <p>Empower the next generations of students to be the disruptors of the future</p>
+            <a href="#" className="triangle-btn edu" onClick={e => e.preventDefault()}>Learn More</a>
           </div>
         </div>
+
+        {/* Maker Section - Right/Center Triangle */}
+        <div
+          className="triangle-card maker-triangle"
+          style={{
+            backgroundImage: "url('/assets/images/makerbg.jpg')",
+            clipPath: 'polygon(100% 0%, 100% 100%, 0% 50%)',
+          }}
+        >
+          <div className="triangle-content center" style={{ alignItems: 'flex-end', textAlign: 'right', justifyContent: 'center', paddingRight: '7.5rem', paddingLeft: '0', width: '100%', boxSizing: 'border-box' }}>
+            <h2>Maker</h2>
+            <p>Find creative solutions to everyday challenges</p>
+            <a href="#" className="triangle-btn maker" onClick={e => e.preventDefault()}>Learn More</a>
+          </div>
+        </div>
+
+        {/* Pro Section - Bottom Left Triangle */}
+        <div
+          className="triangle-card pro-triangle"
+          style={{
+            backgroundImage: "url('/assets/images/probg.jpg')",
+            clipPath: 'polygon(0% 50%, 100% 100%, 0% 100%)',
+          }}
+        >
+          <div className="triangle-content left bottom" style={{ justifyContent: 'flex-end', alignItems: 'flex-start', paddingBottom: '7rem', paddingTop: '0.5rem' }}>
+            <h2>Pro</h2>
+            <p>Enable businesses of any size to exploit the potential of AI and IoT</p>
+            <a href="#" className="triangle-btn pro" onClick={e => e.preventDefault()}>Learn More</a>
+          </div>
+        </div>
+
+        {/* Diagonal division lines */}
+        <svg
+          className="triangle-svg-lines"
+          viewBox="0 0 800 300"
+          preserveAspectRatio="none"
+        >
+          <line x1="0" y1="150" x2="800" y2="0" stroke="rgba(156, 163, 175, 0.4)" strokeWidth="2" />
+          <line x1="0" y1="150" x2="800" y2="300" stroke="rgba(156, 163, 175, 0.4)" strokeWidth="2" />
+        </svg>
       </div>
-      {/* popouts removed for categories */}
     </section>
-  )
+  );
 }
 
 export default function Home(){
