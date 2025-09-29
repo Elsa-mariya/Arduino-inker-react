@@ -225,10 +225,28 @@
   color: #fff;
 }
 .hero-background img { width: 100%; height: 100%; object-fit: cover; display:block }
-.hero-overlay { position:absolute; inset:0; background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)); }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* Transparent/neutral overlay */
+  background: linear-gradient(120deg, rgba(20,24,31,0.82) 0%, rgba(20,24,31,0.32) 100%);
+}
 .hero-content-overlay { position:absolute; text-align:center }
-.hero-content-overlay h1 { font-size: 2.6rem; margin:0; font-weight:800; letter-spacing:-0.5px }
-.hero-content-overlay p { margin-top:0.5rem; font-size:1.15rem; font-weight:600 }
+.hero-content-overlay h1 {
+  font-size: 5.2rem;
+  margin: 0;
+  font-weight: 1000;
+  letter-spacing: -1.5px;
+  line-height: 1.04;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.hero-content-overlay p {
+  margin-top: 1.1rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.08);
+}
 
 /* ---- PARTNERS SECTION ---- */
 .partners { padding: 3rem 0 }

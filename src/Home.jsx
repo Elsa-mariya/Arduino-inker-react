@@ -6,7 +6,7 @@ function Hero(){
   return (
     <section id="home" className="hero">
       <div className="hero-background">
-        <img src="/assets/images/photo-1687179185565-6c46a72b4963" alt="Students working with Arduino" />
+  <img src="/assets/images/herobg.jpg" alt="Students working with Arduino" />
         <div className="hero-overlay"></div>
       </div>
       <div className="hero-content-overlay">
